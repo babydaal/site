@@ -4,6 +4,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   safelist: ['outline-none'],
+  dark: 'class',
   theme: {
     extend: {
       maxWidth: {
