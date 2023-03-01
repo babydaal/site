@@ -40,24 +40,27 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Hero
-        headline="Indian inspired delights"
-        description="Come and get it, b***ches"
-      />
-      <Grid variant="filled">
+      <Hero headline="Granola never tasted so colorful." description={null} />
+      {/* <Grid variant="filled"> */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard
             key={product.id}
             product={product}
+            variant={'home'}
+            className="animated fadeIn"
             imgProps={{
               alt: product.name,
-              width: i === 0 ? 1080 : 540,
-              height: i === 0 ? 1080 : 540,
+              width: 480,
+              height: 480,
+              // width: i === 0 ? 1080 : 540,
+              // height: i === 0 ? 1080 : 540,
               priority: true,
             }}
           />
         ))}
-      </Grid>
+      </div>
+      {/* </Grid> */}
       <Marquee>
         {['t1', 't2', 't3', 't4', 't5'].map((t) => (
           <Text key={t}>Testimony {t}</Text>
@@ -66,7 +69,7 @@ export default function Home({
           <ProductCard key={product.id} product={product} variant="slim" />
         ))} */}
       </Marquee>
-      <Grid layout="B" variant="filled">
+      {/* <Grid layout="B" variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard
             key={product.id}
@@ -78,7 +81,7 @@ export default function Home({
             }}
           />
         ))}
-      </Grid>
+      </Grid> */}
       {/* <HomeAllProductsGrid
         newestProducts={products}
         categories={categories}
