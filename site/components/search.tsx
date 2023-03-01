@@ -72,7 +72,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 mb-20">
         <div className="col-span-8 lg:col-span-2 order-1 lg:order-none">
           {/* Categories */}
-          <div className="relative inline-block w-full">
+          {/* <div className="relative inline-block w-full">
             <div className="lg:hidden">
               <span className="rounded-md shadow-sm">
                 <button
@@ -169,10 +169,10 @@ export default function Search({ categories, brands }: SearchPropsType) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Designs */}
-          <div className="relative inline-block w-full">
+          {/* <div className="relative inline-block w-full">
             <div className="lg:hidden mt-3">
               <span className="rounded-md shadow-sm">
                 <button
@@ -214,7 +214,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  {/* <ul>
+                  <ul>
                     <li
                       className={cn(
                         'block text-sm leading-5 text-accent-4 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
@@ -268,11 +268,11 @@ export default function Search({ categories, brands }: SearchPropsType) {
                         </Link>
                       </li>
                     ))}
-                  </ul> */}
+                  </ul>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* Products */}
         <div className="col-span-8 order-3 lg:order-none">
@@ -347,7 +347,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
         </div>
 
         {/* Sort */}
-        <div className="col-span-8 lg:col-span-2 order-2 lg:order-none">
+        {/* <div className="col-span-8 lg:col-span-2 order-2 lg:order-none">
           <div className="relative inline-block w-full">
             <div className="lg:hidden">
               <span className="rounded-md shadow-sm">
@@ -380,7 +380,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                 activeFilter !== 'sort' || toggleFilter !== true ? 'hidden' : ''
               }`}
             >
-              {/* <div className="rounded-sm bg-accent-0 shadow-xs lg:bg-none lg:shadow-none">
+              <div className="rounded-sm bg-accent-0 shadow-xs lg:bg-none lg:shadow-none">
                 <div
                   role="menu"
                   aria-orientation="vertical"
@@ -439,10 +439,10 @@ export default function Search({ categories, brands }: SearchPropsType) {
                     ))}
                   </ul>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </Container>
   )
