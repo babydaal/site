@@ -1,20 +1,20 @@
 {
-  "name": "Next.js Commerce",
-  "short_name": "Next.js Commerce",
-  "description": "Next.js Commerce -> https://www.nextjs.org/commerce",
+  "name": "babydaal",
+  "short_name": "babydaal",
+  "description": "Indian inspired delights",
   "display": "standalone",
   "start_url": "/",
-  "theme_color": "#fff",
+  "theme_color": "#000",
   "background_color": "#000000",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "/logo-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/logo-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
