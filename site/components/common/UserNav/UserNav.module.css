@@ -7,7 +7,7 @@
 }
 
 .item {
-  @apply ml-6 flex items-center relative;
+  @apply ml-6 flex items-center relative text-primary;
 }
 
 .item > button {
@@ -40,7 +40,7 @@
 }
 
 .mobileMenu {
-  @apply flex lg:hidden ml-6 text-white;
+  @apply flex lg:hidden ml-6 text-primary;
 }
 
 .avatarButton:focus,

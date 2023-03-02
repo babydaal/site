@@ -65,7 +65,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
           />
         </div>
         <hr className="mt-7 border-accent-2" />
-        <section className="py-12 px-6 mb-10">
+        {/* <section className="py-12 px-6 mb-10">
           <Text variant="sectionHeading">Related Products</Text>
           <div className={s.relatedProductsGrid}>
             {relatedProducts.map((p) => (
@@ -84,7 +84,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
       </Container>
       <SEO
         title={product.name}

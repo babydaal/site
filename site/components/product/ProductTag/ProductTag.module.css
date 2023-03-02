@@ -4,14 +4,16 @@
 }
 
 .root .name {
-  @apply pt-0 max-w-full w-full leading-extra-loose;
+  @apply pt-0 max-w-full w-full leading-extra-loose bg-primary;
   font-size: 2rem;
   letter-spacing: 0.4px;
   line-height: 2.1em;
+  opacity: 0.7;
 }
 
 .root .name span {
-  @apply py-4 px-6 bg-primary text-primary font-bold;
+  @apply py-4 px-6 text-primary font-bold;
+  opacity: 1;
   min-height: 70px;
   font-size: inherit;
   letter-spacing: inherit;

@@ -101,7 +101,9 @@ const CartSidebarView: FC = () => {
               </li>
               <li className="flex justify-between py-1">
                 <span>Shipping</span>
-                <span className="font-bold tracking-wide">FREE</span>
+                <span className="font-bold tracking-wide">
+                  Calculated at checkout
+                </span>
               </li>
             </ul>
             <div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-2">
@@ -111,11 +113,11 @@ const CartSidebarView: FC = () => {
             <div>
               {process.env.COMMERCE_CUSTOMCHECKOUT_ENABLED ? (
                 <Button Component="a" width="100%" onClick={goToCheckout}>
-                  Proceed to Checkout ({total})
+                  Checkout ({total})
                 </Button>
               ) : (
                 <Button href="/checkout" Component="a" width="100%">
-                  Proceed to Checkout
+                  Checkout
                 </Button>
               )}
             </div>
