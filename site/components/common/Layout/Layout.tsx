@@ -109,20 +109,30 @@ const Layout: React.FC<Props> = ({
 }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
-  const navBarlinks = categories.slice(0, 2).map((c) => ({
-    label: c.name,
-    href: `/search/${c.slug}`,
-  }))
+  // const navbarLinks = categories.slice(0, 2).map((c) => ({
+  //   label: c.name,
+  //   href: `/search/${c.slug}`,
+  // }))
+  const navbarLinks = [
+    {
+      label: 'About',
+      href: '/about',
+    },
+    {
+      label: 'Products',
+      href: '/search',
+    },
+  ]
 
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
-        <Navbar links={navBarlinks} />
+        <Navbar links={navbarLinks} />
         <main className="fit">{children}</main>
         <Footer pages={pageProps.pages} />
         <ModalUI />
         <CheckoutProvider>
-          <SidebarUI links={navBarlinks} />
+          <SidebarUI links={navbarLinks} />
         </CheckoutProvider>
         <FeatureBar
           title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."

@@ -2,6 +2,9 @@
   "provider": "shopify",
   "features": {
     "wishlist": false,
-    "customerAuth": true
+    "customerAuth": false,
+    "search": false,
+    "cart": true,
+    "customCheckout": false
   }
 }

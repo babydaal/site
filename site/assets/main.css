@@ -1,7 +1,56 @@
+@import './fonts.css';
 @tailwind base;
 @import './base.css';
 
 @tailwind components;
 @import './components.css';
+
+@layer components {
+  .display-lg {
+    @apply font-script text-6xl font-semibold;
+  }
+  .display-md {
+    @apply font-rounded text-5xl font-medium;
+  }
+  .display-sm {
+    @apply font-rounded text-4xl font-medium;
+  }
+  .headline-lg {
+    @apply font-rounded font-medium text-4xl;
+  }
+  .headline-md {
+    @apply font-informal font-semibold text-3xl uppercase;
+  }
+  .headline-sm {
+    @apply font-rounded font-medium text-2xl;
+  }
+  .title-lg {
+    @apply font-script text-xl font-semibold;
+  }
+  .title-md {
+    @apply font-rounded text-base font-medium;
+  }
+  .title-sm {
+    @apply font-rounded text-md font-medium;
+  }
+  .label-lg {
+    @apply font-script text-md font-semibold;
+  }
+  .label-md {
+    @apply font-rounded text-sm font-medium;
+  }
+  .label-sm {
+    @apply font-rounded text-xs font-medium;
+  }
+  .body-lg {
+    @apply font-rounded text-base font-medium;
+  }
+  .body-md {
+    @apply font-rounded text-sm font-medium;
+  }
+  .body-sm {
+    @apply font-rounded text-xs font-medium;
+  }
+}
 
 @tailwind utilities;

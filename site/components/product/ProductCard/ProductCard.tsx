@@ -13,7 +13,7 @@ interface Props {
   product: Product
   noNameTag?: boolean
   imgProps?: Omit<ImageProps, 'src' | 'layout' | 'placeholder' | 'blurDataURL'>
-  variant?: 'default' | 'slim' | 'simple'
+  variant?: 'default' | 'slim' | 'simple' | 'home'
 }
 
 const placeholderImg = '/product-img-placeholder.svg'
@@ -43,10 +43,29 @@ const ProductCard: FC<Props> = ({
       className={rootClassName}
       aria-label={product.name}
     >
+      {variant === 'home' && (
+        <>
+          <div className={s.imageContainer}>
+            {product?.images && (
+              <Image
+                quality="85"
+                src={product.images[0]?.url || placeholderImg}
+                alt={product.name || 'Product Image'}
+                height={320}
+                width={320}
+                {...imgProps}
+              />
+            )}
+          </div>
+          <div className="title-lg">
+            <span>{product.name}</span>
+          </div>
+        </>
+      )}
       {variant === 'slim' && (
         <>
           <div className={s.header}>
-            <span>{product.name}</span>
+            <span className="title-lg">{product.name}</span>
           </div>
           {product?.images && (
             <Image
@@ -73,11 +92,11 @@ const ProductCard: FC<Props> = ({
           {!noNameTag && (
             <div className={s.header}>
               <h3 className={s.name}>
-                <span>{product.name}</span>
+                <span className="title-lg">{product.name}</span>
               </h3>
-              <div className={s.price}>
+              {/* <div className={s.price}>
                 {`${price} ${product.price?.currencyCode}`}
-              </div>
+              </div> */}
             </div>
           )}
           <div className={s.imageContainer}>
@@ -98,13 +117,13 @@ const ProductCard: FC<Props> = ({
 
       {variant === 'default' && (
         <>
-          {process.env.COMMERCE_WISHLIST_ENABLED && (
+          {/* {process.env.COMMERCE_WISHLIST_ENABLED && (
             <WishlistButton
               className={s.wishlistButton}
               productId={product.id}
               variant={product.variants[0] as any}
             />
-          )}
+          )} */}
           <ProductTag
             name={product.name}
             price={`${price} ${product.price?.currencyCode}`}

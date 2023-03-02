@@ -2,7 +2,7 @@ import { FC } from 'react'
 import Link from 'next/link'
 import s from './Navbar.module.css'
 import NavbarRoot from './NavbarRoot'
-import { Logo, Container } from '@components/ui'
+import { LogoOneLine, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
 
 interface Link {
@@ -20,12 +20,12 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/" className={s.logo} aria-label="Logo">
-            <Logo />
+            <LogoOneLine />
           </Link>
           <nav className={s.navMenu}>
-            <Link href="/search" className={s.link}>
+            {/* <Link href="/search" className={s.link}>
               All
-            </Link>
+            </Link> */}
             {links?.map((l) => (
               <Link href={l.href} key={l.href} className={s.link}>
                 {l.label}
