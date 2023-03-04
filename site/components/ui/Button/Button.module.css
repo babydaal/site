@@ -24,6 +24,18 @@
   @apply bg-accent-1 text-accent-3 border-accent-2 cursor-not-allowed;
 }
 
+.hero {
+  @apply py-1 mt-2 mb-4 bg-secondary-container text-on-secondary-container;
+}
+
+.hero:hover {
+  @apply border-accent-secondary-9 bg-accent-secondary-2;
+}
+
+.hero[data-active] {
+  @apply bg-accent-secondary-3;
+}
+
 .slim {
   @apply py-2 transform-none normal-case;
 }

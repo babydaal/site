@@ -10,11 +10,15 @@ export const productConnectionFragment = /* GraphQL */ `
         title
         vendor
         handle
+        description
         priceRange {
           minVariantPrice {
             amount
             currencyCode
           }
+        }
+        flavor: metafield(namespace: "custom", key: "flavor") {
+          value
         }
         images(first: 1) {
           pageInfo {

@@ -23,23 +23,22 @@ const Hero: FC<HeroProps> = ({ headline, description }) => {
         <div className={s.root}>
           <div className={s.wrapper}>
             <Image
-              src="/hero_granola.png"
+              src="/hero_granola_2.png"
               alt="Yummy granola"
               // fill={true}
               className={s.img}
-              width={756}
-              height={116}
+              width={1131}
+              height={480}
             />
           </div>
           <h2 className={titleCn}>{headline}</h2>
-          <Link href="/search">
+          <Link className="mt-4 mb-4" href="/search">
             <Button
-              variant="flat"
+              variant="hero"
               type="button"
               onClick={(e) => handleClick(e)}
-              className="mt-2 mb-4"
             >
-              Shop
+              Shop now
             </Button>
           </Link>
           {!!description && (

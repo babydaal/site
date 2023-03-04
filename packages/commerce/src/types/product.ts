@@ -133,6 +133,10 @@ export interface Product {
    * The product’s vendor name.
    */
   vendor?: string
+  /**
+   * custom metadata
+   */
+  flavor: { value: string }
 }
 
 export interface SearchProductsBody {
