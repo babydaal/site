@@ -47,12 +47,12 @@ export default function Home({
           <ProductCard
             key={product.id}
             product={product}
-            variant={'home'}
+            variant="simple"
             className="animated fadeIn"
             imgProps={{
               alt: product.name,
-              width: 480,
-              height: 480,
+              width: 280,
+              height: 280,
               // width: i === 0 ? 1080 : 540,
               // height: i === 0 ? 1080 : 540,
               priority: true,

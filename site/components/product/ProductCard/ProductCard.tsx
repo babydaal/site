@@ -36,7 +36,7 @@ const ProductCard: FC<Props> = ({
     { [s.slim]: variant === 'slim', [s.simple]: variant === 'simple' },
     className
   )
-
+  const desClassName = cn(s.description, 'title-md')
   return (
     <Link
       href={`/product/${product.slug}`}
@@ -51,8 +51,9 @@ const ProductCard: FC<Props> = ({
                 quality="85"
                 src={product.images[0]?.url || placeholderImg}
                 alt={product.name || 'Product Image'}
-                height={320}
-                width={320}
+                height={280}
+                width={280}
+                className={s.productImage}
                 {...imgProps}
               />
             )}
@@ -89,16 +90,6 @@ const ProductCard: FC<Props> = ({
               variant={product.variants[0]}
             />
           )}
-          {!noNameTag && (
-            <div className={s.header}>
-              <h3 className={s.name}>
-                <span className="title-lg">{product.name}</span>
-              </h3>
-              {/* <div className={s.price}>
-                {`${price} ${product.price?.currencyCode}`}
-              </div> */}
-            </div>
-          )}
           <div className={s.imageContainer}>
             {product?.images && (
               <Image
@@ -112,6 +103,19 @@ const ProductCard: FC<Props> = ({
               />
             )}
           </div>
+          {!noNameTag && (
+            <div className={s.header}>
+              <h3 className={s.name}>
+                <span>{product.name}</span>
+              </h3>
+              {/* <div className={s.price}>
+                {`${price} ${product.price?.currencyCode}`}
+              </div> */}
+              <h3 className={desClassName}>
+                <span className="title-md">{product.flavor.value}</span>
+              </h3>
+            </div>
+          )}
         </>
       )}
 

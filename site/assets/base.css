@@ -41,6 +41,8 @@
   --primary-2: var(--md-ref-palette-primary90);
   --secondary: var(--md-on-secondary);
   --secondary-2: var(--md-ref-palette-secondary90);
+  --secondary-container: var(--md-secondary-container);
+  --on-secondary-container: var(--md-on-secondary-container);
 
   --selection: var(--cyan);
 
@@ -70,6 +72,16 @@
   --accent-7: var(--md-ref-palette-primary30);
   --accent-8: var(--md-ref-palette-primary20);
   --accent-9: var(--md-ref-palette-primary10);
+  --accent-secondary-0: var(--md-ref-palette-secondary100);
+  --accent-secondary-1: var(--md-ref-palette-secondary90);
+  --accent-secondary-2: var(--md-ref-palette-secondary80);
+  --accent-secondary-3: var(--md-ref-palette-secondary70);
+  --accent-secondary-4: var(--md-ref-palette-secondary60);
+  --accent-secondary-5: var(--md-ref-palette-secondary50);
+  --accent-secondary-6: var(--md-ref-palette-secondary40);
+  --accent-secondary-7: var(--md-ref-palette-secondary30);
+  --accent-secondary-8: var(--md-ref-palette-secondary20);
+  --accent-secondary-9: var(--md-ref-palette-secondary10);
   --font-sans: 'museo-sans-rounded', -apple-system, system-ui,
     BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', sans-serif;
 }

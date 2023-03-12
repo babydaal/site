@@ -8,11 +8,18 @@
 
 .wrapper {
   @apply flex justify-center max-w-4xl min-h-[116px];
+  div {
+    box-shadow: inset 0 0 24px rgb(255 255 255);
+  }
 }
-.img {
-  /* @apply bg-accent-9; */
-  box-shadow: inset 0 0 24px rgb(255 255 255);
-}
+/* .img {
+  @screen xs {
+    @apply w-full;
+    height: 60vh;
+    object-fit: cover;
+    transform: rotate(270deg);
+  }
+} */
 
 .description {
   @apply mt-4 leading-8 text-accent-2 mb-1 lg:max-w-4xl;

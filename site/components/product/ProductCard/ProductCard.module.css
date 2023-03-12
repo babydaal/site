@@ -19,38 +19,42 @@
   &:nth-child(6n + 1) .header .name span,
   &:nth-child(6n + 1) .header .price,
   &:nth-child(6n + 1) .wishlistButton {
-    @apply bg-violet text-white;
+    /* @apply bg-violet text-white; */
   }
 
   &:nth-child(6n + 5) .header .name span,
   &:nth-child(6n + 5) .header .price,
   &:nth-child(6n + 5) .wishlistButton {
-    @apply bg-blue text-white;
+    /* @apply bg-blue text-white; */
   }
 
   &:nth-child(6n + 3) .header .name span,
   &:nth-child(6n + 3) .header .price,
   &:nth-child(6n + 3) .wishlistButton {
-    @apply bg-pink text-white;
+    /* @apply bg-pink text-white; */
   }
 
   &:nth-child(6n + 6) .header .name span,
   &:nth-child(6n + 6) .header .price,
   &:nth-child(6n + 6) .wishlistButton {
-    @apply bg-cyan text-white;
+    /* @apply bg-cyan text-white; */
   }
 }
 
 .header {
   @apply transition-colors ease-in-out duration-500
-  absolute top-0 left-0 z-20 pr-16;
+  /* absolute top-0 left-0 z-20 pr-16; */;
 }
 
 .header .name {
   @apply pt-0 max-w-full w-full leading-extra-loose
-  transition-colors ease-in-out duration-500;
-  font-size: 2rem;
-  letter-spacing: 0.4px;
+  transition-colors ease-in-out duration-500 text-center;
+  /* font-size: 2rem;
+  letter-spacing: 0.4px; */
+}
+
+.header .description {
+  @apply max-w-full w-full text-center;
 }
 
 .header .name span {
@@ -69,7 +73,7 @@
 }
 
 .imageContainer {
-  @apply flex items-center justify-center overflow-hidden w-full h-full;
+  @apply flex items-center justify-center overflow-hidden w-full h-[70%];
 }
 
 .imageContainer .productImage {
@@ -86,7 +90,7 @@
 }
 
 .simple .header .price {
-  @apply text-sm;
+  @apply text-sm items-center;
 }
 
 /* Variant Slim */
