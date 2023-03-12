@@ -18,10 +18,10 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
     <Container clean className="mx-auto max-w-8xl px-6">
       <div className={s.nav}>
-        <div className="flex items-center flex-1">
-          <Link href="/" className={s.logo} aria-label="Logo">
-            <LogoOneLine />
-          </Link>
+        <Link href="/" className={s.logo} aria-label="Logo">
+          <LogoOneLine />
+        </Link>
+        <div className="flex justify-items-end flex-1">
           <nav className={s.navMenu}>
             {/* <Link href="/search" className={s.link}>
               All
@@ -32,14 +32,14 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
               </Link>
             ))}
           </nav>
-        </div>
-        {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className="justify-center flex-1 hidden lg:flex">
-            <Searchbar />
+          {process.env.COMMERCE_SEARCH_ENABLED && (
+            <div className="justify-center flex-1 hidden lg:flex">
+              <Searchbar />
+            </div>
+          )}
+          <div className="flex items-center justify-end flex-1 space-x-8">
+            <UserNav />
           </div>
-        )}
-        <div className="flex items-center justify-end flex-1 space-x-8">
-          <UserNav />
         </div>
       </div>
       {process.env.COMMERCE_SEARCH_ENABLED && (
